@@ -3,19 +3,25 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fisher.Bookstore.Controllers
 {
-    public class BooksController : Controller
+[Route("books")]    
+public class BooksController : Controller
     {
+[Route("")]
+[Route("index")]
+
         public IActionResult Index()
         {
-            return Content("This is the book controller's index action");
+            return View();
         }
+[Route("new")]
         public IActionResult New()
         {
-            return Content("This is the book controller's New action");
+            return View();
         }
+[Route("best-sellers")]
         public IActionResult BestSellers()
         {
-            return Content("This is the book controller's Best action");
+            return View();
         }
     }
 }
